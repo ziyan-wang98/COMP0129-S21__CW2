@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+%\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+\documentclass[conference]{IEEEtran}
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if
+                                                          % you want to use the \thanks command
+
+%\overrideIEEEmargins                                      % Needed to meet printer requirements.https://www.overleaf.com/project/604423bbd83278a204ea4742
+%In case you encounter the following error:
+%Error 1010 The PDF file may be corrupt (unable to open PDF file) OR
+%Error 1000 An error occurred while parsing a contents stream. Unable to analyze the PDF file.
+%This is a known problem with pdfLaTeX conversion filter. The file cannot be opened with acrobat reader
+%Please use one of the alternatives below to circumvent this error by uncommenting one or the other
+%\pdfobjcompresslevel=0
+%\pdfminorversion=4
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+%\usepackage{algorithmicx}
+%\usepackage[Algorithm,ruled]{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{url}
+\usepackage[ruled,vlined]{algorithm2e}
+%\usepackage{balance}
+\usepackage{subcaption}
+\usepackage{breqn}
+\usepackage{algorithm2e}
+\usepackage{dblfloatfix} 
+\usepackage[export]{adjustbox}
+\usepackage{tabulary,booktabs}
+\usepackage{float}
+\definecolor{lightgray}{rgb}{0.7,0.68,0.66}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\usepackage{listings}
+\lstset{
+ backgroundcolor=\color{lightgray}, 
+ basicstyle = \footnotesize,       
+ breakatwhitespace = false,        
+ breaklines = true,                 
+ captionpos = b,                    
+ commentstyle = \color{mygreen}\bfseries,
+ extendedchars = false,             
+ frame =shadowbox, 
+ framerule=0.5pt,
+ keepspaces=true,
+ keywordstyle=\color{blue}\bfseries, % keyword style
+ language = C++,                     % the language of code
+ otherkeywords={string}, 
+ numbers=left, 
+ numbersep=5pt,
+ numberstyle=\tiny\color{mygray},
+ rulecolor=\color{black},         
+ showspaces=false,  
+ showstringspaces=false, 
+ showtabs=false,    
+ stepnumber=1,         
+ stringstyle=\color{mymauve},        % string literal style
+ tabsize=2,          
+ title=\lstname                      
+}
+\newcommand{\junk}[1]{}
+\newcommand{\abs}[1]{\left| #1 \right|} %| |
+\newcommand{\comment}[1]{\textcolor{red}{#1}}
+
+\title{\LARGE \bf
+Disinfection Robot Performs Full Coverage Alcohol Spraying: System Design and Performance Evaluation}
+
+% \author{Dimitrios Kanoulas$^{1}$% <-this % stops a space
+% \thanks{$^{1}$Department of Computer Science, University College London, Gower Street, WC1E 6BT, UK. {\tt\small {d.kanoulas}@ucl.ac.uk}}}%
+
+
+\author{\IEEEauthorblockN{Ziyan Wang\IEEEauthorrefmark{1},
+Guanting Cen\IEEEauthorrefmark{2}, Yuhang Ma\IEEEauthorrefmark{3}, Shenheng Yu\IEEEauthorrefmark{4}}
+\IEEEauthorblockA{Department of Computer Science,
+University College London\\
+Gower Street, WC1E 6BT, UK\\
+Email: \IEEEauthorrefmark{1}ziyan-wang@ucl.ac.uk,
+\IEEEauthorrefmark{2}ucabgce@ucl.ac.uk,
+\IEEEauthorrefmark{3}ucabyhm@ucl.ac.uk,
+\IEEEauthorrefmark{4}shenheng.yu.20@ucl.ac.uk}}
+
+
+
+
+\date{01 January 2021} %it will not be displayed
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\begin{abstract}
+The COVID-19 outbreak has rigorously hit the global manufacturing and service industries. Since there is no vaccine or any proven medical treatment, it is urgent to take the necessary steps to prevent this virus's spread. Considering the virus spreads through human-to-human interaction, blockades have been announced in many countries/regions, and the public is advised to abide by the social distancing policy strictly. Robots can perform activities similar to humans and can be programmed to replace specific human interactions. This article aims to use a robot combination of a robotic arm and a universal wheel platform in a dynamic pharmaceutical environment, which is used to carry out a solution for precise fixed-point and complete coverage alcohol spraying and disinfection tasks. This customized robot solution's vision is to substitute humans and conduct hazardous and monotonous tasks efficiently and assuredly.
+\end{abstract}
+
+\input{intro.tex}
+\input{method.tex}
+\input{evaluation}
+
+\input{conclusions.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+
+
+% {\color{red} Red Parts need to be determined, \textbf{DDL is 3.10}, Each one should take one to write(Both Introduction and Background belong \ref{Sec:intro}),\textbf{ IF WE CAN'T HANDLE, WE SHOULD EXTEND IT!!!!!! SO GUYS MAKE DECISION AS SOON AS POSSIBLE!}}
+\end{document}
+
